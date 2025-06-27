@@ -1,0 +1,4 @@
+export declare function removeDiacritics(word: string): string;
+export declare function slugify(word: string, separator?: string): string;
+export declare function normalizeWord(word: string): string;
+export declare function similarity(wordA: string, wordB: string): number;

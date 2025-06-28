@@ -1,0 +1,1 @@
+export function levenshtein(e,t){if(e===t)return 0;let r=e.length,n=t.length;if(!r)return n;if(!n)return r;let l=new Uint8Array(n+1),f=new Uint8Array(n+1);for(let e=0;e<=n;e++)l[e]=e;for(let i=0;i<r;i++){f[0]=i+1;for(let r=0;r<n;r++){let n=+(e[i]!==t[r]),o=l[r+1]+1,u=f[r]+1,h=l[r]+n;f[r+1]=o<u?o<h?o:h:u<h?u:h}[l,f]=[f,l]}return l[n]}

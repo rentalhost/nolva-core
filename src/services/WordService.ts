@@ -1,4 +1,4 @@
-import { distance as levenshtein } from "fastest-levenshtein";
+import { levenshtein } from "@/services/LevenshteinService";
 
 export function removeDiacritics(word: string) {
   return word.normalize("NFD").replace(/[\u0300-\u036f]/g, "");

@@ -1,1 +1,1 @@
-export{removeDiacritics,normalizeWord,slugify,similarity}from"./services/WordService.js";
+export{memoize}from"./services/MemoiseService.js";export{removeDiacritics,normalizeWord,slugify,similarity}from"./services/WordService.js";

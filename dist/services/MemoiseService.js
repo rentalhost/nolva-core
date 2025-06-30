@@ -1,0 +1,1 @@
+let e=new Map;export function memoize(t,n,r){let i=`${t}:${n.join(";")}`;if(e.has(i))return e.get(i);let o=r(...n);return e.set(i,o),o}

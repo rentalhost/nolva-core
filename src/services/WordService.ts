@@ -83,8 +83,8 @@ const normalizationRules = new Map<number, Map<string, string>>([
       ["cao", "sao"], // a[cao] => asao
       ["coe", "soe"], // cancoes => cansoes
       ["bri", "br"], // equilibrio => equilibro
-      ["s**", ""], // cancoes = cancoe
-      ["l**", "u"], // facil = faciu
+      ["s**", ""], // cancoes => cancoe
+      ["l**", "u"], // facil => faciu
       ["ti*", "te"], // jabuti => jabute
       ["ult", "ut"], // ultimo => utimo
     ]),

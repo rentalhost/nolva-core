@@ -1,3 +1,5 @@
+export { memoize } from "@/services/MemoiseService";
+
 export {
   removeDiacritics,
   normalizeWord,

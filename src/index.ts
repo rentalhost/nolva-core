@@ -6,7 +6,7 @@ export { levenshtein } from "@/services/LevenshteinService";
 export { getTarget } from "@/services/LinkService";
 export { memoize } from "@/services/MemoizeService";
 export { clamp } from "@/services/NumberService";
-export { deferPromise } from "@/services/PromiseService";
+export { deferPromise, promiseAll } from "@/services/PromiseService";
 export {
   removeDiacritics,
   normalizeWord,

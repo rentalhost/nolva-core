@@ -1,1 +1,1 @@
-export function deferPromise(){let e;return{promise:new Promise(r=>{e=r}),resolve:e}}
+export function deferPromise(){let e;return{promise:new Promise(r=>{e=r}),resolve:e}}export async function promiseAll(e){let r=Object.keys(e);return Object.fromEntries((await Promise.all(Object.values(e))).map((e,t)=>[r[t],e]))}

@@ -1,0 +1,1 @@
+export function clamp(n,r,t){return n<r?r:n>t?t:n}

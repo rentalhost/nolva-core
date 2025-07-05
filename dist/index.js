@@ -1,1 +1,1 @@
-export{range,toArray}from"./services/ArrayService.js";export{levenshtein}from"./services/LevenshteinService.js";export{memoize}from"./services/MemoizeService.js";export{removeDiacritics,normalizeWord,slugify,similarity}from"./services/WordService.js";
+export{range,toArray}from"./services/ArrayService.js";export{getExtension}from"./services/FileService.js";export{levenshtein}from"./services/LevenshteinService.js";export{memoize}from"./services/MemoizeService.js";export{removeDiacritics,normalizeWord,slugify,similarity}from"./services/WordService.js";

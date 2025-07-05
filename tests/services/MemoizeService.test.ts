@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { normalizeWord } from "@/index";
-import { memoize } from "@/services/MemoiseService";
+import { memoize } from "@/services/MemoizeService";
 
 describe("services/CacheService", () => {
   function normalizeMemoise(phrase: string) {

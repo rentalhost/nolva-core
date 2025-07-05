@@ -1,0 +1,1 @@
+export function range(r,n,e=1){return Array.from({length:(n-r)/e+1},(n,t)=>r+t*e)}

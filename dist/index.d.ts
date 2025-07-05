@@ -7,4 +7,4 @@ export { getTarget } from "./services/LinkService";
 export { memoize } from "./services/MemoizeService";
 export { clamp } from "./services/NumberService";
 export { deferPromise, promiseAll } from "./services/PromiseService";
-export { removeDiacritics, normalizeWord, slugify, slugifyId, similarity, } from "./services/WordService";
+export { removeDiacritics, normalizeWord, slugify, slugifyId, extractSlugId, similarity, } from "./services/WordService";

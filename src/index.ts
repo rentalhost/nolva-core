@@ -12,5 +12,6 @@ export {
   normalizeWord,
   slugify,
   slugifyId,
+  extractSlugId,
   similarity,
 } from "@/services/WordService";

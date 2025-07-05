@@ -1,5 +1,5 @@
 {
-  "name": "@rentalhost/nova-core",
+  "name": "@rentalhost/nolva-core",
   "description": "Nolva core functions.",
   "version": "1.0.0",
   "license": "Apache License 2.0",
@@ -23,9 +23,9 @@
   },
   "devDependencies": {
     "@rheactor/eslint-config-rheactor": "github:rheactor/eslint-config-rheactor",
-    "@swc/cli": "^0.7.7",
-    "@swc/core": "^1.12.9",
-    "@types/node": "^24.0.10",
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.12.11",
+    "@types/node": "^24.0.13",
     "eslint": "^9.30.1",
     "rimraf": "^6.0.1",
     "ts-patch": "^3.3.0",

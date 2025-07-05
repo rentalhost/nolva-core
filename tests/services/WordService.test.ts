@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  extractSlugId,
   normalizeWord,
   removeDiacritics,
   similarity,
@@ -55,6 +56,20 @@ describe("services/WordService", () => {
 
   it.each(slugifyTests)('slugifyId(%j) = "123-%s"', (test, expected) => {
     expect(slugifyId(123, test)).toBe(`123-${expected}`);
+  });
+
+  const extractSlugIdTests = [
+    ["", undefined],
+    ["-test", undefined],
+    ["test", undefined],
+    ["-1-test", undefined],
+    ["10e3-test", undefined],
+    ["0-test", 0],
+    ["123-test", 123],
+  ] as const;
+
+  it.each(extractSlugIdTests)("extractSlugId(%j) = %j", (input, expected) => {
+    expect(extractSlugId(input)).toBe(expected);
   });
 
   const normalizeWordTests = [

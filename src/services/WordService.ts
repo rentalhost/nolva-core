@@ -14,6 +14,15 @@ export function slugifyId(id: number, word: string) {
   return `${id}-${slugify(word)}`;
 }
 
+export function extractSlugId(id: string) {
+  const [extractedId] = id.split("-");
+  const castId = Number(extractedId);
+
+  return Number.isInteger(castId) && String(castId) === extractedId
+    ? castId
+    : undefined;
+}
+
 const normalizationRules = new Map<number, Map<string, string>>([
   [
     1,

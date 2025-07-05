@@ -1,1 +1,1 @@
-export function range(r,n,e=1){return Array.from({length:(n-r)/e+1},(n,t)=>r+t*e)}
+export function range(r,n,t=1){return Array.from({length:(n-r)/t+1},(n,e)=>r+e*t)}export function toArray(r){return Array.isArray(r)?r:[r]}

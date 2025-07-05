@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { range } from "@/services/ArrayService";
+import { range, toArray } from "@/services/ArrayService";
 
 describe("services/ArrayService", () => {
   const rangeTests = [
@@ -20,5 +20,20 @@ describe("services/ArrayService", () => {
 
   it.each(rangeTests)("range(%j, %j, %j) = %j", (from, to, step, output) => {
     expect(range(from, to, step)).toStrictEqual(output);
+  });
+
+  const toArrayTests = [
+    [123, [123]],
+    [[123], [123]],
+    [
+      [1, 2, 3],
+      [1, 2, 3],
+    ],
+    ["abc", ["abc"]],
+    [{ abc: 123 }, [{ abc: 123 }]],
+  ] as const;
+
+  it.each(toArrayTests)("toArray(%j) = %j", (input, output) => {
+    expect(toArray(input)).toStrictEqual(output);
   });
 });

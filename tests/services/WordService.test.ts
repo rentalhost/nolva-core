@@ -5,6 +5,7 @@ import {
   removeDiacritics,
   similarity,
   slugify,
+  slugifyId,
 } from "@/services/WordService";
 
 describe("services/WordService", () => {
@@ -50,6 +51,10 @@ describe("services/WordService", () => {
 
   it.each(slugifyTests)("slugify(%j) = %j", (test, expected) => {
     expect(slugify(test)).toStrictEqual(expected);
+  });
+
+  it.each(slugifyTests)('slugifyId(%j) = "123-%s"', (test, expected) => {
+    expect(slugifyId(123, test)).toBe(`123-${expected}`);
   });
 
   const normalizeWordTests = [

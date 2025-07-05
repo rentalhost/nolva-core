@@ -11,5 +11,6 @@ export {
   removeDiacritics,
   normalizeWord,
   slugify,
+  slugifyId,
   similarity,
 } from "@/services/WordService";

@@ -10,6 +10,10 @@ export function slugify(word: string, separator = "-") {
     .replaceAll(/^-+|-+$/g, "");
 }
 
+export function slugifyId(id: number, word: string) {
+  return `${id}-${slugify(word)}`;
+}
+
 const normalizationRules = new Map<number, Map<string, string>>([
   [
     1,

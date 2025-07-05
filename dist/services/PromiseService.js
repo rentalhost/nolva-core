@@ -1,0 +1,1 @@
+export function deferPromise(){let e;return{promise:new Promise(r=>{e=r}),resolve:e}}

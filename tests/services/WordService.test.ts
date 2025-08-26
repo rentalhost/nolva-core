@@ -235,6 +235,39 @@ describe("services/WordService", () => {
     expect(normalizeWord(test)).toStrictEqual(expected);
   });
 
+  const normalizeWordEnglishTests = [
+    ["cat", "kat"],
+    ["quick", "kuik"],
+    ["realize", "realise"],
+    ["happy", "happi"],
+    ["phone", "fone"],
+    ["ghost", "gost"],
+    ["knife", "nife"],
+    ["write", "rite"],
+    ["what", "wat"],
+    ["ship", "sip"],
+    ["school", "skool"],
+    ["think", "tink"],
+    ["colour", "kolor"],
+    ["encyclopaedia", "enkiklopedia"],
+    ["oestrogen", "estrogen"],
+    ["night", "nit"],
+    ["tongue", "tong"],
+    ["running", "runn"],
+    ["studied", "studi"],
+    ["studies", "studi"],
+    ["wolves", "wolf"],
+    ["worked", "work"],
+    ["working", "work"],
+  ] as const;
+
+  it.each(normalizeWordEnglishTests)(
+    'normalizeWord(%j, "en") = %j',
+    (test, expected) => {
+      expect(normalizeWord(test, "en")).toStrictEqual(expected);
+    },
+  );
+
   const similarityTests = [
     ["vacina", "vassinas", "1.00"],
     ["vacina", "vaca", "0.33"],

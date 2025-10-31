@@ -1,8 +1,4 @@
 import { recommended, vitest } from "@rheactor/eslint-config-rheactor";
-import { defineConfig, globalIgnores } from "eslint/config";
+import { defineConfig } from "eslint/config";
 
-export default defineConfig([
-  ...recommended,
-  ...vitest,
-  globalIgnores(["dist"]),
-]);
+export default defineConfig(recommended, vitest);

@@ -332,4 +332,16 @@ describe("services/WordService", () => {
       ).toStrictEqual(expected);
     },
   );
+
+  const englishSimilarityTests = [
+    ["example", "examples", "0.83"],
+    ["man", "men", "0.44"],
+  ] as const;
+
+  it.each(englishSimilarityTests)(
+    "similarity(%j, %j) = %j",
+    (wordA, wordB, expected) => {
+      expect(similarity(wordA, wordB).toFixed(2)).toStrictEqual(expected);
+    },
+  );
 });

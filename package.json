@@ -1,7 +1,7 @@
 {
   "name": "@rentalhost/nolva-core",
   "description": "Nolva core functions.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache License 2.0",
   "type": "module",
   "files": [
@@ -21,20 +21,21 @@
     "eslint:fix": "eslint --fix ./src ./tests",
     "test": "vitest"
   },
+  "dependencies": {
+    "tailwind-merge": "^3.4.0"
+  },
   "devDependencies": {
     "@rheactor/eslint-config-rheactor": "github:rheactor/eslint-config-rheactor",
-    "@swc/cli": "^0.7.8",
-    "@swc/core": "^1.14.0",
-    "@types/node": "^24.9.2",
-    "eslint": "^9.38.0",
-    "rimraf": "^6.1.0",
+    "@swc/cli": "^0.8.0",
+    "@swc/core": "^1.15.11",
+    "@types/node": "^25.2.3",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.1.2",
     "ts-patch": "^3.3.0",
     "typescript": "^5.9.3",
-    "typescript-transform-paths": "^3.5.5",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.6"
-  },
-  "dependencies": {
-    "tailwind-merge": "^3.3.1"
+    "typescript-transform-paths": "^3.5.6",
+    "vite-tsconfig-paths": "^6.1.0",
+    "vitest": "^4.0.18"
   }
 }

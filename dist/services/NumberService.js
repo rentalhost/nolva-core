@@ -1,1 +1,1 @@
-export function clamp(n,r,t){return n<r?r:n>t?t:n}
+export function clamp(n,t,r){return n<t?t:Math.min(n,r)}

@@ -5,6 +5,7 @@ export { noop } from "@/services/FunctionService";
 export { levenshtein } from "@/services/LevenshteinService";
 export { getTarget } from "@/services/LinkService";
 export { memoize } from "@/services/MemoizeService";
+export { getNextImageUrl } from "@/services/NextService";
 export { clamp } from "@/services/NumberService";
 export { deferPromise, promiseAll } from "@/services/PromiseService";
 export { twMerge } from "@/services/TailwindMergeService";

@@ -1,0 +1,1 @@
+import{getImageProps as t}from"next/image";export function getNextImageUrl(e,r,o=75){return t({src:e,alt:"",width:r,height:0,quality:o}).props.src}

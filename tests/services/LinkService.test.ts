@@ -13,6 +13,9 @@ describe("services/LinkService", () => {
     ["http://example.com", undefined, "_blank"],
     ["https://example.com", undefined, "_blank"],
     ["ftp://example.com", undefined, "_self"],
+    ["/", undefined, "_self"],
+    ["/home", undefined, "_self"],
+    ["/home", "_blank", "_blank"],
   ] as const;
 
   it.each(getTargetTests)("getTarget(%j, %j) = %j", (src, target, output) => {

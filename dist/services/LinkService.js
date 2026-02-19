@@ -1,1 +1,1 @@
-export function getTarget(t,e){if("_blank"===e||"blank"===e)return"_blank";if("_self"===e||"self"===e)return"_self";if(void 0===t)return"_blank";try{let{protocol:e}=new URL(t);if("mailto:"===e||"http:"!==e&&"https:"!==e)return"_self"}catch{}return"_blank"}
+export function getTarget(t,e){if("_blank"===e||"blank"===e)return"_blank";if("_self"===e||"self"===e)return"_self";if(void 0===t)return"_blank";if(t.startsWith("/"))return"_self";try{let{protocol:e}=new URL(t);if("mailto:"===e||"http:"!==e&&"https:"!==e)return"_self"}catch{}return"_blank"}

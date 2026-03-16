@@ -31,8 +31,7 @@ export function levenshtein(wordA: string, wordB: string) {
       const ins = vectorCurrent[j]! + 1;
       const sub = vectorPrevious[j]! + cost;
 
-      vectorCurrent[j + 1] =
-        del < ins ? Math.min(del, sub) : Math.min(ins, sub);
+      vectorCurrent[j + 1] = del < ins ? Math.min(del, sub) : Math.min(ins, sub);
     }
 
     [vectorPrevious, vectorCurrent] = [vectorCurrent, vectorPrevious];

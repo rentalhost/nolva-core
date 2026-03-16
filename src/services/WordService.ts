@@ -18,17 +18,12 @@ export function extractSlugId(id: string) {
   const [extractedId] = id.split("-");
   const castId = Number(extractedId);
 
-  return Number.isInteger(castId) && String(castId) === extractedId
-    ? castId
-    : undefined;
+  return Number.isInteger(castId) && String(castId) === extractedId ? castId : undefined;
 }
 
 type NormalizationLanguage = "en" | "pt";
 
-const normalizationRules = new Map<
-  NormalizationLanguage,
-  Map<number, Map<string, string>>
->([
+const normalizationRules = new Map<NormalizationLanguage, Map<number, Map<string, string>>>([
   [
     "pt",
     new Map([
@@ -166,10 +161,7 @@ const normalizationRules = new Map<
   ],
 ]);
 
-export function normalizeWord(
-  word: string,
-  language: NormalizationLanguage = "pt",
-) {
+export function normalizeWord(word: string, language: NormalizationLanguage = "pt") {
   const slug = `${slugify(word)}**`;
   const slugLength = slug.length - 2;
 
@@ -180,10 +172,7 @@ export function normalizeWord(
   positionLoop: while (position < slugLength) {
     for (let size = 4; size >= 1; size--) {
       const wordSubstring = slug.slice(position, position + size);
-      const wordNormalization = normalizationRules
-        .get(language)!
-        .get(size)
-        ?.get(wordSubstring);
+      const wordNormalization = normalizationRules.get(language)!.get(size)?.get(wordSubstring);
 
       if (wordNormalization !== undefined) {
         normalization += wordNormalization;

@@ -24,12 +24,9 @@ describe("services/WordService", () => {
     ["às", "as"],
   ] as const;
 
-  it.each(removeDiacriticsTests)(
-    "removeDiacritics(%j) = %j",
-    (test, expected) => {
-      expect(removeDiacritics(test)).toStrictEqual(expected);
-    },
-  );
+  it.each(removeDiacriticsTests)("removeDiacritics(%j) = %j", (test, expected) => {
+    expect(removeDiacritics(test)).toStrictEqual(expected);
+  });
 
   const slugifyTests = [
     ["Ação", "acao"],
@@ -261,12 +258,9 @@ describe("services/WordService", () => {
     ["working", "work"],
   ] as const;
 
-  it.each(normalizeWordEnglishTests)(
-    'normalizeWord(%j, "en") = %j',
-    (test, expected) => {
-      expect(normalizeWord(test, "en")).toStrictEqual(expected);
-    },
-  );
+  it.each(normalizeWordEnglishTests)('normalizeWord(%j, "en") = %j', (test, expected) => {
+    expect(normalizeWord(test, "en")).toStrictEqual(expected);
+  });
 
   const similarityTests = [
     ["vacina", "vassinas", "1.00"],
@@ -324,24 +318,18 @@ describe("services/WordService", () => {
     ["xxxxx", "yyyyy", "0.00"],
   ] as const;
 
-  it.each(similarityTests)(
-    "similarity(%j, %j) = %j",
-    (wordA, wordB, expected) => {
-      expect(
-        similarity(normalizeWord(wordA), normalizeWord(wordB)).toFixed(2),
-      ).toStrictEqual(expected);
-    },
-  );
+  it.each(similarityTests)("similarity(%j, %j) = %j", (wordA, wordB, expected) => {
+    expect(similarity(normalizeWord(wordA), normalizeWord(wordB)).toFixed(2)).toStrictEqual(
+      expected,
+    );
+  });
 
   const englishSimilarityTests = [
     ["example", "examples", "0.83"],
     ["man", "men", "0.44"],
   ] as const;
 
-  it.each(englishSimilarityTests)(
-    "similarity(%j, %j) = %j",
-    (wordA, wordB, expected) => {
-      expect(similarity(wordA, wordB).toFixed(2)).toStrictEqual(expected);
-    },
-  );
+  it.each(englishSimilarityTests)("similarity(%j, %j) = %j", (wordA, wordB, expected) => {
+    expect(similarity(wordA, wordB).toFixed(2)).toStrictEqual(expected);
+  });
 });

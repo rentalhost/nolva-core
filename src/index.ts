@@ -1,5 +1,5 @@
 export type { Arrayable } from "@/services/ArrayService";
-export { range, toArray } from "@/services/ArrayService";
+export { range, toArray, shuffle } from "@/services/ArrayService";
 export { getExtension } from "@/services/FileService";
 export { noop } from "@/services/FunctionService";
 export { levenshtein } from "@/services/LevenshteinService";

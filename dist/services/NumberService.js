@@ -1,1 +1,1 @@
-export function clamp(n,t,r){return n<t?t:Math.min(n,r)}
+export function clamp(t,e,r){return t<e?e:Math.min(t,r)}export function formatNumber(t,e=0,r=".",n=""){let[l,o=""]=t.toFixed(e).split("."),i=""===n?l:l.replaceAll(/\B(?=(?:\d{3})+(?!\d))/g,n);return 0===e?i:i+r+o}

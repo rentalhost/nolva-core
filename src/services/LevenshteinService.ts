@@ -17,21 +17,21 @@ export function levenshtein(wordA: string, wordB: string) {
   let vectorPrevious = new Uint8Array(lengthB + 1);
   let vectorCurrent = new Uint8Array(lengthB + 1);
 
-  for (let j = 0; j <= lengthB; j++) {
-    vectorPrevious[j] = j;
+  for (let index = 0; index <= lengthB; index++) {
+    vectorPrevious[index] = index;
   }
 
-  for (let i = 0; i < lengthA; i++) {
-    vectorCurrent[0] = i + 1;
+  for (let index = 0; index < lengthA; index++) {
+    vectorCurrent[0] = index + 1;
 
-    for (let j = 0; j < lengthB; j++) {
-      const cost = wordA[i] === wordB[j] ? 0 : 1;
+    for (let indexB = 0; indexB < lengthB; indexB++) {
+      const cost = wordA[index] === wordB[indexB] ? 0 : 1;
 
-      const del = vectorPrevious[j + 1]! + 1;
-      const ins = vectorCurrent[j]! + 1;
-      const sub = vectorPrevious[j]! + cost;
+      const del = vectorPrevious[indexB + 1]! + 1;
+      const ins = vectorCurrent[indexB]! + 1;
+      const sub = vectorPrevious[indexB]! + cost;
 
-      vectorCurrent[j + 1] = del < ins ? Math.min(del, sub) : Math.min(ins, sub);
+      vectorCurrent[indexB + 1] = del < ins ? Math.min(del, sub) : Math.min(ins, sub);
     }
 
     [vectorPrevious, vectorCurrent] = [vectorCurrent, vectorPrevious];

@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { getTarget } from "#/services/LinkService";
 
 describe("services/LinkService", () => {
+  // eslint-disable-next-line unicorn/no-non-function-verb-prefix
   const getTargetTests = [
     ["any", "_blank", "_blank"],
     ["any", "blank", "_blank"],
@@ -10,6 +11,7 @@ describe("services/LinkService", () => {
     ["any", "self", "_self"],
     [undefined, undefined, "_blank"],
     ["mailto:example@example.com", undefined, "_self"],
+    // eslint-disable-next-line unicorn/prefer-https
     ["http://example.com", undefined, "_blank"],
     ["https://example.com", undefined, "_blank"],
     ["ftp://example.com", undefined, "_self"],
@@ -18,6 +20,7 @@ describe("services/LinkService", () => {
     ["/home", "_blank", "_blank"],
   ] as const;
 
+  // eslint-disable-next-line unicorn/name-replacements
   it.each(getTargetTests)("getTarget(%j, %j) = %j", (src, target, output) => {
     expect(getTarget(src, target)).toStrictEqual(output);
   });

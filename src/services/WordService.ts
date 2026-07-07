@@ -1,7 +1,7 @@
 import { levenshtein } from "#/services/LevenshteinService";
 
 export function removeDiacritics(word: string) {
-  return word.normalize("NFD").replaceAll(/[\u0300-\u036F]/g, "");
+  return word.normalize("NFD").replaceAll(/[\u{0300}-\u{036F}]/gu, "");
 }
 
 export function slugify(word: string, separator = "-") {
@@ -18,7 +18,7 @@ export function extractSlugId(id: string) {
   const [extractedId] = id.split("-");
   const castId = Number(extractedId);
 
-  return Number.isInteger(castId) && String(castId) === extractedId ? castId : undefined;
+  return Number.isSafeInteger(castId) && String(castId) === extractedId ? castId : undefined;
 }
 
 type NormalizationLanguage = "en" | "pt";

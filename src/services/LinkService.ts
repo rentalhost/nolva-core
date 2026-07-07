@@ -1,5 +1,6 @@
 type Target = "_blank" | "_self" | "blank" | "self";
 
+// eslint-disable-next-line unicorn/name-replacements
 export function getTarget(src: string | undefined, target: Target | (string & {}) | undefined) {
   if (target === "_blank" || target === "blank") {
     return "_blank";

@@ -10,6 +10,7 @@ import {
 } from "#/services/WordService";
 
 describe("services/WordService", () => {
+  // eslint-disable-next-line unicorn/no-non-function-verb-prefix
   const removeDiacriticsTests = [
     ["Ação", "Acao"],
     ["café", "cafe"],

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { range, toArray } from "@/services/ArrayService";
+import { range, toArray } from "#/services/ArrayService";
 
 describe("services/ArrayService", () => {
   const rangeTests = [

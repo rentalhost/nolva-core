@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { twMerge } from "@/services/TailwindMergeService";
+import { twMerge } from "#/services/TailwindMergeService";
 
 describe("services/TailwindMergeService", () => {
   it("twMerge", () => {

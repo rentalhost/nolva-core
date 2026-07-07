@@ -1,4 +1,4 @@
-import { levenshtein } from "@/services/LevenshteinService";
+import { levenshtein } from "#/services/LevenshteinService";
 
 export function removeDiacritics(word: string) {
   return word.normalize("NFD").replaceAll(/[\u0300-\u036F]/g, "");

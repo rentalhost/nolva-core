@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { clamp, formatNumber } from "@/services/NumberService";
+import { clamp, formatNumber } from "#/services/NumberService";
 
 describe("services/NumberService", () => {
   const clampTests = [

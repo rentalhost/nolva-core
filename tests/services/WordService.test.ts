@@ -7,7 +7,7 @@ import {
   similarity,
   slugify,
   slugifyId,
-} from "@/services/WordService";
+} from "#/services/WordService";
 
 describe("services/WordService", () => {
   const removeDiacriticsTests = [

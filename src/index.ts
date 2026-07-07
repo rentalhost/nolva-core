@@ -1,14 +1,14 @@
-export type { Arrayable } from "@/services/ArrayService";
-export { range, toArray, shuffle } from "@/services/ArrayService";
-export { getExtension } from "@/services/FileService";
-export { noop } from "@/services/FunctionService";
-export { levenshtein } from "@/services/LevenshteinService";
-export { getTarget } from "@/services/LinkService";
-export { memoize } from "@/services/MemoizeService";
-export { getNextImageUrl } from "@/services/NextService";
-export { clamp, formatNumber } from "@/services/NumberService";
-export { deferPromise, promiseAll } from "@/services/PromiseService";
-export { twMerge } from "@/services/TailwindMergeService";
+export type { Arrayable } from "#/services/ArrayService";
+export { range, toArray, shuffle } from "#/services/ArrayService";
+export { getExtension } from "#/services/FileService";
+export { noop } from "#/services/FunctionService";
+export { levenshtein } from "#/services/LevenshteinService";
+export { getTarget } from "#/services/LinkService";
+export { memoize } from "#/services/MemoizeService";
+export { getNextImageUrl } from "#/services/NextService";
+export { clamp, formatNumber } from "#/services/NumberService";
+export { deferPromise, promiseAll } from "#/services/PromiseService";
+export { twMerge } from "#/services/TailwindMergeService";
 export {
   removeDiacritics,
   normalizeWord,
@@ -16,4 +16,4 @@ export {
   slugifyId,
   extractSlugId,
   similarity,
-} from "@/services/WordService";
+} from "#/services/WordService";

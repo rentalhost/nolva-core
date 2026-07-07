@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { normalizeWord } from "@/index";
-import { memoize } from "@/services/MemoizeService";
+import { normalizeWord } from "#/index";
+import { memoize } from "#/services/MemoizeService";
 
 function normalizeMemoise(phrase: string) {
   return memoize("normalize", [phrase], normalizeWord);

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { getExtension } from "@/services/FileService";
+import { getExtension } from "#/services/FileService";
 
 describe("services/FileService", () => {
   const getExtensionTests = [

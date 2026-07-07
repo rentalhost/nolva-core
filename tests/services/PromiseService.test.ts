@@ -2,7 +2,7 @@ import { inspect } from "node:util";
 
 import { describe, expect, it } from "vitest";
 
-import { deferPromise, promiseAll } from "@/services/PromiseService";
+import { deferPromise, promiseAll } from "#/services/PromiseService";
 
 describe("services/PromiseService", () => {
   it("deferPromise", async () => {

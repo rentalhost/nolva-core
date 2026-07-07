@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { getTarget } from "@/services/LinkService";
+import { getTarget } from "#/services/LinkService";
 
 describe("services/LinkService", () => {
   const getTargetTests = [

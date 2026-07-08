@@ -11,7 +11,7 @@
         "@rheactor/eslint-config-rheactor": "github:rheactor/eslint-config-rheactor",
         "@swc/cli": "^0.8.1",
         "@swc/core": "^1.15.43",
-        "@types/node": "^26.1.0",
+        "@types/node": "^26.1.1",
         "eslint": "^10.6.0",
         "next": "^16.2.10",
         "oxfmt": "^0.58.0",
@@ -260,7 +260,7 @@
 
     "@oxfmt/binding-win32-x64-msvc": ["@oxfmt/binding-win32-x64-msvc@0.58.0", "", { "os": "win32", "cpu": "x64" }, "sha512-N/wUU4N5PZ2orBtI+Ko7MnMfYLfE7K91UrGMY/c/pYyHR3lA9kwst1XugkZx+92YcRh/Eo+iv2eTESSWXfiZPA=="],
 
-    "@rheactor/eslint-config-rheactor": ["@rheactor/eslint-config-rheactor@github:rheactor/eslint-config-rheactor#b0581ff", { "dependencies": { "@eslint/eslintrc": "^3.3.5", "@eslint/js": "^10.0.1", "@next/eslint-plugin-next": "^16.2.10", "@stylistic/eslint-plugin": "^5.10.0", "eslint": "^10.6.0", "eslint-config-next": "^16.2.10", "eslint-import-resolver-typescript": "^4.4.5", "eslint-plugin-import-x": "^4.17.1", "eslint-plugin-promise": "^7.3.0", "eslint-plugin-react": "^7.37.5", "eslint-plugin-react-hooks": "^7.1.1", "eslint-plugin-react-hooks-addons": "^0.5.1", "eslint-plugin-regexp": "^3.1.1", "eslint-plugin-unicorn": "^71.1.0", "eslint-plugin-unused-imports": "^4.4.1", "eslint-plugin-vitest": "^0.5.4", "globals": "^17.7.0", "typescript": "^6.0.3", "typescript-eslint": "^8.63.0" }, "peerDependencies": { "react": "^19.2.7" }, "optionalPeers": ["react"] }, "rheactor-eslint-config-rheactor-b0581ff", "sha512-WMOyPMGtYJaLDStlH7q9RN4St15/DckcixVTkoAYZ2vjQU17YsLhqqcI49UQHkIQf359fx2kdkj3yXL7My9fTA=="],
+    "@rheactor/eslint-config-rheactor": ["@rheactor/eslint-config-rheactor@github:rheactor/eslint-config-rheactor#4d41c3f", { "dependencies": { "@eslint/eslintrc": "^3.3.5", "@eslint/js": "^10.0.1", "@next/eslint-plugin-next": "^16.2.10", "@stylistic/eslint-plugin": "^5.10.0", "eslint": "^10.6.0", "eslint-config-next": "^16.2.10", "eslint-import-resolver-typescript": "^4.4.5", "eslint-plugin-import-x": "^4.17.1", "eslint-plugin-promise": "^7.3.0", "eslint-plugin-react": "^7.37.5", "eslint-plugin-react-hooks": "^7.1.1", "eslint-plugin-react-hooks-addons": "^0.5.1", "eslint-plugin-regexp": "^3.1.1", "eslint-plugin-unicorn": "^71.1.0", "eslint-plugin-unused-imports": "^4.4.1", "eslint-plugin-vitest": "^0.5.4", "globals": "^17.7.0", "typescript": "^6.0.3", "typescript-eslint": "^8.63.0" }, "peerDependencies": { "react": "^19.2.7" }, "optionalPeers": ["react"] }, "rheactor-eslint-config-rheactor-4d41c3f", "sha512-jhWDO3M9siTk8RHwXhJ9jVeVczMkdhY6zpiEXkmxLagyIBdg3Lhmcf60VXnZgOpjvytd1XGwoDrN6qv1JYGCjg=="],
 
     "@rolldown/binding-android-arm64": ["@rolldown/binding-android-arm64@1.0.0-rc.9", "", { "os": "android", "cpu": "arm64" }, "sha512-lcJL0bN5hpgJfSIz/8PIf02irmyL43P+j1pTCfbD1DbLkmGRuFIA4DD3B3ZOvGqG0XiVvRznbKtN0COQVaKUTg=="],
 
@@ -360,7 +360,7 @@
 
     "@types/json5": ["@types/json5@0.0.29", "", {}, "sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ=="],
 
-    "@types/node": ["@types/node@26.1.0", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-O0A1G3xPGy4w7AgQdAQYUlQ+BKk2Oovw8eRpofyp5KdBZULnbe+WqaOVNrm705SHphCiG4XHsACrSmPu1f+Kgw=="],
+    "@types/node": ["@types/node@26.1.1", "", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw=="],
 
     "@typescript-eslint/eslint-plugin": ["@typescript-eslint/eslint-plugin@8.57.1", "", { "dependencies": { "@eslint-community/regexpp": "^4.12.2", "@typescript-eslint/scope-manager": "8.57.1", "@typescript-eslint/type-utils": "8.57.1", "@typescript-eslint/utils": "8.57.1", "@typescript-eslint/visitor-keys": "8.57.1", "ignore": "^7.0.5", "natural-compare": "^1.4.0", "ts-api-utils": "^2.4.0" }, "peerDependencies": { "@typescript-eslint/parser": "^8.57.1", "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0", "typescript": ">=4.8.4 <6.0.0" } }, "sha512-Gn3aqnvNl4NGc6x3/Bqk1AOn0thyTU9bqDRhiRnUWezgvr2OnhYCWCgC8zXXRVqBsIL1pSDt7T9nJUe0oM0kDQ=="],
 

@@ -10,7 +10,8 @@
         "defaults": true,
         "arguments": true
       }
-    }
+    },
+    "paths": { "#/*": ["./*"] }
   },
   "test": ".*\\.js$",
   "minify": true

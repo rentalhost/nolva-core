@@ -5,14 +5,15 @@ export type FetchUrl = Exclude<Parameters<typeof fetch>[0], Request>;
 // eslint-disable-next-line unicorn/name-replacements
 export type URLSearchParamsQuery = ConstructorParameters<typeof URLSearchParams>[0];
 
-interface RequestOptions<T> {
+interface RequestOptions {
   method?: "GET" | "POST";
   url: FetchUrl;
   query?: URLSearchParamsQuery;
   body?: object;
   headers?: HeadersInit;
-  processor(response: Response): Promise<T | undefined>;
 }
+
+type ResponseProcessor<T> = (response: Response) => Promise<T | undefined>;
 
 interface RequestResponse<T> {
   success: boolean;
@@ -20,7 +21,10 @@ interface RequestResponse<T> {
   data?: T;
 }
 
-async function requestRaw<T>(options: RequestOptions<T>): Promise<RequestResponse<T>> {
+async function requestRaw<T>(
+  options: RequestOptions,
+  processor: ResponseProcessor<T>,
+): Promise<RequestResponse<T>> {
   const url = new URL(options.url).href;
   const urlQuery =
     options.query === undefined ? "" : `?${new URLSearchParams(options.query).toString()}`;
@@ -34,7 +38,7 @@ async function requestRaw<T>(options: RequestOptions<T>): Promise<RequestRespons
   return {
     success: result.ok,
     status: result.status,
-    data: await options.processor(result),
+    data: await processor(result),
   };
 }
 
@@ -42,14 +46,14 @@ async function processorJSON<T>(response: Response) {
   return parseAs<T | undefined>(await response.text());
 }
 
-export async function request<T>(options: RequestOptions<T>) {
-  return requestRaw<T>({ ...options, processor: processorJSON });
+export async function request<T>(options: RequestOptions) {
+  return requestRaw<T>(options, processorJSON);
 }
 
 async function processorText(response: Response) {
   return response.text();
 }
 
-export async function requestText(options: RequestOptions<string>) {
-  return requestRaw<string>({ ...options, processor: processorText });
+export async function requestText(options: RequestOptions) {
+  return requestRaw<string>(options, processorText);
 }

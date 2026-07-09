@@ -2,6 +2,7 @@ export type { Arrayable } from "./services/ArrayService";
 export { range, toArray, shuffle } from "./services/ArrayService";
 export { getExtension } from "./services/FileService";
 export { noop } from "./services/FunctionService";
+export { parseAs } from "./services/JsonService";
 export { levenshtein } from "./services/LevenshteinService";
 export { getTarget } from "./services/LinkService";
 export { memoize } from "./services/MemoizeService";

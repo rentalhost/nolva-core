@@ -6,6 +6,8 @@ export { getExtension } from "#/services/FileService";
 
 export { noop } from "#/services/FunctionService";
 
+export { parseAs } from "#/services/JsonService";
+
 export { levenshtein } from "#/services/LevenshteinService";
 
 export { getTarget } from "#/services/LinkService";

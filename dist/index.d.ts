@@ -9,5 +9,6 @@ export { memoize } from "./services/MemoizeService";
 export { getNextImageUrl } from "./services/NextService";
 export { clamp, formatNumber } from "./services/NumberService";
 export { deferPromise, promiseAll } from "./services/PromiseService";
+export { request, requestText } from "./services/RequestService";
 export { twMerge } from "./services/TailwindMergeService";
 export { removeDiacritics, normalizeWord, slugify, slugifyId, extractSlugId, similarity, } from "./services/WordService";

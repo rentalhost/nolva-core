@@ -20,6 +20,8 @@ export { clamp, formatNumber } from "#/services/NumberService";
 
 export { deferPromise, promiseAll } from "#/services/PromiseService";
 
+export { request, requestText } from "#/services/RequestService";
+
 export { twMerge } from "#/services/TailwindMergeService";
 
 export {

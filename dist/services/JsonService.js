@@ -1,1 +1,1 @@
-export function parseAs(r,t){if(void 0===r)return t;try{return JSON.parse(r)}catch{return t}}
+export function parseAs(r,t){if("string"!=typeof r)return t;try{return JSON.parse(r)}catch{return t}}

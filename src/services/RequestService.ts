@@ -25,7 +25,7 @@ async function requestRaw<T>(
   options: RequestOptions,
   processor: ResponseProcessor<T>,
 ): Promise<RequestResponse<T>> {
-  const url = new URL(options.url).href;
+  const url = new URL(options.url, "https://example.com").href;
   const urlQuery =
     options.query === undefined ? "" : `?${new URLSearchParams(options.query).toString()}`;
 

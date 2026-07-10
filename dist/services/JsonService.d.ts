@@ -1,2 +1,2 @@
-export declare function parseAs<T>(data: string | undefined): T | undefined;
-export declare function parseAs<T>(data: string | undefined, defaultValue: T): T;
+export declare function parseAs<T>(data: string | null | undefined): T | undefined;
+export declare function parseAs<T>(data: string | null | undefined, defaultValue: T): T;

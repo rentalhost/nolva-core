@@ -6,7 +6,6 @@ export { parseAs } from "./services/JsonService";
 export { levenshtein } from "./services/LevenshteinService";
 export { getTarget } from "./services/LinkService";
 export { memoize } from "./services/MemoizeService";
-export { getNextImageUrl } from "./services/NextService";
 export { clamp, formatNumber } from "./services/NumberService";
 export { deferPromise, promiseAll } from "./services/PromiseService";
 export { request, requestText } from "./services/RequestService";

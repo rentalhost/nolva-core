@@ -17,15 +17,9 @@ declare function noop(): void;
 declare function parseAs<T>(data: string | null | undefined): T | undefined;
 declare function parseAs<T>(data: string | null | undefined, defaultValue: T): T;
 //#endregion
-//#region src/services/LevenshteinService.d.ts
-declare function levenshtein(wordA: string, wordB: string): number;
-//#endregion
 //#region src/services/LinkService.d.ts
 type Target = "_blank" | "_self" | "blank" | "self";
 declare function getTarget(src: string | undefined, target: Target | (string & {}) | undefined): "_blank" | "_self";
-//#endregion
-//#region src/services/MemoizeService.d.ts
-declare function memoize<const Keys extends string[], Return>(name: string, keys: Keys, callback: (...keys: Keys) => Return): Return;
 //#endregion
 //#region src/services/NumberService.d.ts
 declare function clamp(value: number, min: number, max: number): number;
@@ -61,8 +55,5 @@ declare function removeDiacritics(word: string): string;
 declare function slugify(word: string, separator?: string): string;
 declare function slugifyId(id: number, word: string): string;
 declare function extractSlugId(id: string): number | undefined;
-type NormalizationLanguage = "en" | "pt";
-declare function normalizeWord(word: string, language?: NormalizationLanguage): string;
-declare function similarity(wordA: string, wordB: string): number;
 //#endregion
-export { type Arrayable, chunk, clamp, deferPromise, extractSlugId, formatNumber, getExtension, getTarget, levenshtein, memoize, noop, normalizeWord, parseAs, pluck, promiseAll, range, removeDiacritics, request, requestText, shuffle, similarity, slugify, slugifyId, toArray, twMerge, unique };
+export { type Arrayable, chunk, clamp, deferPromise, extractSlugId, formatNumber, getExtension, getTarget, noop, parseAs, pluck, promiseAll, range, removeDiacritics, request, requestText, shuffle, slugify, slugifyId, toArray, twMerge, unique };

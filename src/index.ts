@@ -8,11 +8,7 @@ export { noop } from "#/services/FunctionService";
 
 export { parseAs } from "#/services/JsonService";
 
-export { levenshtein } from "#/services/LevenshteinService";
-
 export { getTarget } from "#/services/LinkService";
-
-export { memoize } from "#/services/MemoizeService";
 
 export { clamp, formatNumber } from "#/services/NumberService";
 
@@ -22,11 +18,4 @@ export { request, requestText } from "#/services/RequestService";
 
 export { twMerge } from "#/services/TailwindMergeService";
 
-export {
-  removeDiacritics,
-  normalizeWord,
-  slugify,
-  slugifyId,
-  extractSlugId,
-  similarity,
-} from "#/services/WordService";
+export { removeDiacritics, slugify, slugifyId, extractSlugId } from "#/services/WordService";

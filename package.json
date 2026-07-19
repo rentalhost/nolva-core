@@ -44,7 +44,7 @@
   "devDependencies": {
     "@rheactor/eslint-config-rheactor": "github:rheactor/eslint-config-rheactor",
     "@swc/cli": "^0.8.1",
-    "@swc/core": "^1.15.43",
+    "@swc/core": "^1.15.46",
     "@types/node": "^26.1.1",
     "eslint": "^10.7.0",
     "next": "^16.2.10",

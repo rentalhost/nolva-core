@@ -1,6 +1,6 @@
 export type { Arrayable } from "#/services/ArrayService";
 
-export { range, toArray, shuffle } from "#/services/ArrayService";
+export { chunk, pluck, range, shuffle, toArray, unique } from "#/services/ArrayService";
 
 export { getExtension } from "#/services/FileService";
 

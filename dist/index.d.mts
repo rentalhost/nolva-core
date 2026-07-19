@@ -1,8 +1,11 @@
 //#region src/services/ArrayService.d.ts
 type Arrayable<T> = T | T[];
+declare function chunk<T>(array: T[], size: number): T[][];
+declare function pluck<T, K extends keyof T>(array: T[], key: K): Array<T[K]>;
 declare function range(start: number, end: number, step?: number): number[];
-declare function toArray<T>(value: Arrayable<T>): T[];
 declare function shuffle<T>(array: T[]): T[];
+declare function toArray<T>(value: Arrayable<T>): T[];
+declare function unique<T>(array: T[]): T[];
 //#endregion
 //#region src/services/FileService.d.ts
 declare function getExtension(path: string): string | undefined;
@@ -62,4 +65,4 @@ type NormalizationLanguage = "en" | "pt";
 declare function normalizeWord(word: string, language?: NormalizationLanguage): string;
 declare function similarity(wordA: string, wordB: string): number;
 //#endregion
-export { type Arrayable, clamp, deferPromise, extractSlugId, formatNumber, getExtension, getTarget, levenshtein, memoize, noop, normalizeWord, parseAs, promiseAll, range, removeDiacritics, request, requestText, shuffle, similarity, slugify, slugifyId, toArray, twMerge };
+export { type Arrayable, chunk, clamp, deferPromise, extractSlugId, formatNumber, getExtension, getTarget, levenshtein, memoize, noop, normalizeWord, parseAs, pluck, promiseAll, range, removeDiacritics, request, requestText, shuffle, similarity, slugify, slugifyId, toArray, twMerge, unique };

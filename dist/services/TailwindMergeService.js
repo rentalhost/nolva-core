@@ -1,1 +1,0 @@
-import{extendTailwindMerge as e}from"tailwind-merge";export const twMerge=e({extend:{theme:{container:["container"],breakpoint:["mobile"],color:["theme"]}}});

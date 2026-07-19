@@ -1,6 +1,3 @@
 import { defineConfig } from "vitest/config";
 
-export default defineConfig({
-  test: { testTimeout: 250 },
-  resolve: { tsconfigPaths: true },
-});
+export default defineConfig({});

@@ -1,1 +1,0 @@
-export function getExtension(n){return n.includes(".")?n.split(".").pop()??"":void 0}

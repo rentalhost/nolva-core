@@ -1,1 +1,0 @@
-export function range(r,t,n=1){return Array.from({length:(t-r)/n+1},(t,o)=>r+o*n)}export function toArray(r){return Array.isArray(r)?r:[r]}export function shuffle(r){return r.toSorted(()=>Math.random()-.5)}

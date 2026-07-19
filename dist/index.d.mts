@@ -26,7 +26,6 @@ declare function clamp(value: number, min: number, max: number): number;
 declare function formatNumber(value: number, decimals?: number, decimalSeparator?: string, thousandSeparator?: string): string;
 //#endregion
 //#region src/services/PromiseService.d.ts
-declare function deferPromise<T>(): PromiseWithResolvers<T>;
 declare function promiseAll<const T extends Record<string, Promise<unknown>>>(promises: T): Promise<{ [K in keyof T]: Awaited<T[K]>; }>;
 //#endregion
 //#region src/services/RequestService.d.ts
@@ -56,4 +55,4 @@ declare function slugify(word: string, separator?: string): string;
 declare function slugifyId(id: number, word: string): string;
 declare function extractSlugId(id: string): number | undefined;
 //#endregion
-export { type Arrayable, chunk, clamp, deferPromise, extractSlugId, formatNumber, getExtension, getTarget, noop, parseAs, pluck, promiseAll, range, removeDiacritics, request, requestText, shuffle, slugify, slugifyId, toArray, twMerge, unique };
+export { type Arrayable, chunk, clamp, extractSlugId, formatNumber, getExtension, getTarget, noop, parseAs, pluck, promiseAll, range, removeDiacritics, request, requestText, shuffle, slugify, slugifyId, toArray, twMerge, unique };

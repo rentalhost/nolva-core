@@ -1,7 +1,3 @@
-export function deferPromise<T>() {
-  return Promise.withResolvers<T>();
-}
-
 export async function promiseAll<const T extends Record<string, Promise<unknown>>>(promises: T) {
   const keys = Object.keys(promises);
   const results = await Promise.all(Object.values(promises));

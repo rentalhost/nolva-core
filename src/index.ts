@@ -12,7 +12,7 @@ export { getTarget } from "#/services/LinkService";
 
 export { clamp, formatNumber } from "#/services/NumberService";
 
-export { deferPromise, promiseAll } from "#/services/PromiseService";
+export { promiseAll } from "#/services/PromiseService";
 
 export { request, requestText } from "#/services/RequestService";
 

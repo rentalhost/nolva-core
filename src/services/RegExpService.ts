@@ -1,11 +1,5 @@
-type MatchGroups<G extends string> = Record<G, string | undefined>;
+type MatchGroups<Group extends string> = Record<Group, string | undefined>;
 
 export function matchGroups<GroupName extends string>(expression: RegExp, value: string) {
-  const groups = expression.exec(value)?.groups;
-
-  if (!groups) {
-    return undefined;
-  }
-
-  return groups as MatchGroups<GroupName>;
+  return expression.exec(value)?.groups as MatchGroups<GroupName> | undefined;
 }
